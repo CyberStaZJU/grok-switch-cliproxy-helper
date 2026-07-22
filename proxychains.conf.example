@@ -1,0 +1,29 @@
+# proxychains.conf — Example configuration for CLIProxyAPI proxy wrapper
+#
+# Copy this file to proxychains.conf and edit with your proxy details.
+# Do NOT commit proxychains.conf if it contains credentials.
+#
+# Documentation: https://github.com/rofl0r/proxychains-ng
+
+# Use strict chain (all proxies in the list must be reachable)
+strict_chain
+
+# Resolve DNS through the proxy (avoids DNS pollution / spoofing)
+proxy_dns
+
+# Timeouts (milliseconds)
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+
+[ProxyList]
+# Format: type host port [user pass]
+# Choose ONE of the following (comment out the others):
+
+# SOCKS5 proxy (recommended — handles TCP and UDP)
+socks5  127.0.0.1 7891
+
+# HTTP CONNECT proxy
+# http    127.0.0.1 7890
+
+# SOCKS4 proxy (no remote DNS, no UDP)
+# socks4  127.0.0.1 1080

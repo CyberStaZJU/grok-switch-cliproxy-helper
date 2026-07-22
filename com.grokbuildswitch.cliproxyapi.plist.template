@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.grokbuildswitch.cliproxyapi</string>
+  <key>ProgramArguments</key>
+  <array>
+    <!-- Replace PATH_PLACEHOLDER with the full path to cliproxy-wrapper.sh -->
+    <string>PATH_PLACEHOLDER/cliproxy-wrapper.sh</string>
+    <!-- Replace BIN_PLACEHOLDER with the full path to your CLIProxyAPI binary -->
+    <string>BIN_PLACEHOLDER/CLIProxyAPI</string>
+    <string>-config</string>
+    <!-- Replace CONFIG_PLACEHOLDER with the full path to your config.yaml -->
+    <string>CONFIG_PLACEHOLDER/config.yaml</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <!-- Replace WORKDIR_PLACEHOLDER with your CLIProxyAPI working directory -->
+  <string>WORKDIR_PLACEHOLDER</string>
+  <key>StandardOutPath</key>
+  <string>WORKDIR_PLACEHOLDER/logs/stdout.log</string>
+  <key>StandardErrorPath</key>
+  <string>WORKDIR_PLACEHOLDER/logs/stderr.log</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PROXYCHAINS_CONF_FILE</key>
+    <string>PATH_PLACEHOLDER/proxychains.conf</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <dict>
+    <key>SuccessfulExit</key>
+    <false/>
+  </dict>
+</dict>
+</plist>
